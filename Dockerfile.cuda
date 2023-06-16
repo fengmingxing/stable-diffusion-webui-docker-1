@@ -1,9 +1,9 @@
-FROM --platform=$TARGETPLATFORM nvidia/cuda:12.1.1-devel-ubuntu22.04
-LABEL maintainer="Martin Chan @osiutino"
+FROM --platform=linxu/amd64 cr-demo-cn-beijing.cr.volces.com/fengmingxing/cuda:11.4.3-devel-ubuntu20.04
+LABEL maintainer="test"
 
 ARG BRANCH_OR_TAG=master
-ARG BUILD_DATE
-ARG BUILD_VERSION
+ARG BUILD_DATE=20230616
+ARG BUILD_VERSION=v1
 
 LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.version="${BRANCH_OR_TAG}_${BUILD_VERSION}"
